@@ -1,3 +1,53 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navbar,
+.footer {
+  background-color: #252937;
+}
+
+.navbar a {
+  color: white;
+}
+
+#home-link:hover {
+  background-color: #fff;
+  color: #252937;
+}
+
+.navbar a:hover {
+  color: #252937;
+}
+
+h1 {
+  color: #006666;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.main-image {
+  max-width: 50%;
+}
+
+.footer {
+  bottom: 0;
+  color: white;
+  height: 60px;
+  position: absolute;
+  width: 100%;
+}
+
+.footer div {
+  margin-left: 0px;
+  padding-top: 20px;
+}
