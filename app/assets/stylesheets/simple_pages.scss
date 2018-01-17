@@ -2,13 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+// NAVIGATION
 .navbar,
 .footer {
   background-color: #252937;
 }
 
 .navbar a {
-  color: white;
+  color: #edddd4;
+  font-family: 'Roboto', sans-serif;
 }
 
 #home-link:hover {
@@ -20,10 +23,31 @@
   color: #252937;
 }
 
-h1 {
-  color: #006666;
+// BODY
+.page-wrapper {
   font-family: 'Roboto', sans-serif;
-  text-align: center;
+  padding-top: 50px;
+}
+
+#headline {
+  background-color: #197278;
+  margin-top: 0;
+  padding: 10px;
+  width: 100%;
+}
+
+h1,
+h2 {
+  padding-left: 10px;
+}
+
+h1 {
+  color: #edddd4;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
 }
 
 html {
@@ -39,9 +63,10 @@ body {
   max-width: 50%;
 }
 
+// FOOTER
 .footer {
   bottom: 0;
-  color: white;
+  color: #edddd4;
   height: 60px;
   position: absolute;
   width: 100%;
