@@ -1,0 +1,22 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//Table
+#product_tbl {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+#product_tbl th {
+  background-color: #edddd4;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  padding: 20px 10px;
+}
+
+#product_tbl td {
+  font-size: 1.2em;
+  padding: 10px;
+}
