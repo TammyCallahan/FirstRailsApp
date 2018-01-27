@@ -34,16 +34,34 @@
 #product-name-catalog {
   font-family: 'Oswald', sans-serif;
   font-size: 1.5em;
+  padding-left: 0;
   text-decoration: none;
 }
 
-#product-name-catalog:hover {
+#product-name-catalog a:hover {
   background-color: transparent;
   color: #197278;
+  text-decoration: none;
 }
 
 #catalog p {
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   margin-top: 10px;
+}
+
+.carousel-caption {
+  color: #197278;
+}
+
+.carousel-indicators li {
+    border:1px solid #197278;
+}
+
+.carousel-indicators .active {
+    background-color: #197278;
+}
+
+.carousel-inner img {
+  margin: auto;
 }

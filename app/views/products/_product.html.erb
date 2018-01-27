@@ -1,0 +1,13 @@
+<div class="col-sm-2 col-md-4">
+  <div id="catalog-product">
+    <%= image_tag(product.image_url, class: "img-responsive image-catalog") %>
+    <h1 id="product-name-catalog"><%= link_to product.name, product %></h1>
+    <p>Colour: <%= product.colour %></p>
+    <p><%= product.description %></p>
+    <strong><%= number_to_currency(product.price) %></strong>
+  </div>
+  <div class="catalog-product-footer">
+    <%= link_to 'Edit', edit_product_path(product) %>
+    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+</div>
