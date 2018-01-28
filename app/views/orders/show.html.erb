@@ -1,0 +1,28 @@
+<h1 id="headline">View Order Details</h1>
+
+<p>
+  <strong>Order #:</strong>
+  <%= @order.id %>
+</p>
+
+<p>
+  <strong>User ID:</strong>
+  <%= @order.user_id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @order.product.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @order.product.description %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= number_to_currency(@order.total) %>
+</p>
+
+<%= link_to 'Back', orders_path %>

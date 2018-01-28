@@ -1,5 +1,8 @@
 class OrdersController < ApplicationController
+  before_action :set_order, only: [:show, :edit, :update, :destroy]
+
   def index
+    @orders = Order.includes(:product).all
   end
 
   def show
@@ -13,5 +16,11 @@ class OrdersController < ApplicationController
 
   def destroy
   end
-  
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_order
+      @order = Order.find(params[:id])
+    end
+
 end
