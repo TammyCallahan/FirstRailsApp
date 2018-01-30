@@ -64,6 +64,18 @@ body {
   max-width: 50%;
 }
 
+.carousel-caption a {
+  background-color: rgba(237, 221, 212, .4);
+  border-radius: 10px;
+  color: #252937;
+  padding: 10px;
+}
+
+.carousel-caption a:hover {
+  color: #197278;
+  text-decoration: none;
+}
+
 // FOOTER
 .footer {
   bottom: 0;
