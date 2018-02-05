@@ -30,6 +30,7 @@
 // BODY
 .page-wrapper {
   font-family: 'Roboto', sans-serif;
+  padding-bottom: 10px;
   padding-top: 50px;
 }
 
@@ -78,6 +79,21 @@ body {
 .carousel-caption a:hover {
   color: #197278;
   text-decoration: none;
+}
+
+.contact-form {
+  color: #197278;
+  font-size: 1.5em;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 40px;
+  padding-left: 10px;
+}
+
+.contact-form-submit {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 10px;
 }
 
 // FOOTER
