@@ -60,3 +60,6 @@ end
 
 # Installs Devise for user authentication
 gem 'devise'
+
+# Installs CanCanCan for user authorization
+gem 'cancancan', '~> 2.0'

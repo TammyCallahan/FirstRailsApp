@@ -53,6 +53,7 @@
           <li><%= link_to "ABOUT", simple_pages_about_path %></li>
           <li><%= link_to "PRODUCTS", products_path %></li>
           <li><%= link_to "ORDERS", orders_path %></li>
+          <li><%= link_to "USERS", users_path %></li>
           <li><%= link_to "CONTACT", simple_pages_contact_path %></li>
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -60,8 +61,13 @@
   </nav>
 
   <div class="page-wrapper">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <p id="notice" class="alert alert-info" role="alert"><%= notice %></p>
+    <% end %>
+
+    <% if alert %>
+      <p id="alert" class="alert alert-danger" role="alert"><%= alert %></p>
+    <% end %>
     <%= yield %>
   </div>
 

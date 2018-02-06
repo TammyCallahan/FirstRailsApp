@@ -9,6 +9,7 @@
       <h2>
         <%= link_to order.product.name, order.product %>
       </h2>
+      <p>Ordered by: <%= order.user.first_name + " " + order.user.last_name %></p>
       <p><%= order.product.description %></p>
       <strong><%= number_to_currency(order.product.price) %></strong>
     </div><!-- /col -->
