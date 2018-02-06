@@ -57,3 +57,6 @@ group :production do
   # PostgreSQL
   gem 'pg', '~> 0.20'
 end
+
+# Installs Devise for user authentication
+gem 'devise'

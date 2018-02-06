@@ -32,14 +32,24 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse">
+        <!-- User Login Info -->
         <ul class="nav navbar-nav navbar-right">
           <li>
             <%= form_with(url: products_path, method: 'get', local: true, class: "navbar-form") do |form| %>
-              <%= form.label :q, 'Search for:' %>
-              <%= form.text_field :q, id: 'q', value: params[:q] %>
-              <%= form.submit 'Search' %>
+            <%= form.label :q, 'Search for:' %>
+            <%= form.text_field :q, id: 'q', value: params[:q] %>
+            <%= form.submit 'Search' %>
             <% end %>
           </li>
+          <li>
+            <% if user_signed_in? %>
+            <%= link_to('LOGOUT', destroy_user_session_path, method: :delete) %>
+            <% else %>
+            <%= link_to('LOGIN', new_user_session_path) %>
+            <% end %>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left">
           <li><%= link_to "ABOUT", simple_pages_about_path %></li>
           <li><%= link_to "PRODUCTS", products_path %></li>
           <li><%= link_to "ORDERS", orders_path %></li>
@@ -49,16 +59,9 @@
     </div><!-- /.container-fluid -->
   </nav>
 
-  <!-- <nav>
-    <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Contact</li>
-    </ul>
-  </nav> -->
-
   <div class="page-wrapper">
-    <p id="notice"><%= notice %></p>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </div>
 
