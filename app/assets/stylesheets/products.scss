@@ -67,13 +67,41 @@
 }
 
 .ratings-section {
-  border-top: 1px solid #edddd4;
-  height: 400px;
-  margin-top: 20px;
+  border-top: 2px solid #edddd4;
+  margin-top: 40px;
 }
 
 .ratings-section h2 {
   color: #197278;
   font-weight: bold;
+  margin-bottom: 20px;
   text-transform: uppercase;
+}
+
+.rating,
+.rated {
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.product-reviews > .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.ratings-section h4 {
+  color: #197278;
+}
+
+.text-area-width {
+  min-width: 40%;
+}
+
+.review-name {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+hr {
+  border-top: 1px solid #edddd4;
 }
