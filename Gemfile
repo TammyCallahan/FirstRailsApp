@@ -68,3 +68,6 @@ gem 'cancancan', '~> 2.0'
 
 # Installs will_paginate for comment pagination
 gem 'will_paginate', '~> 3.1.1'
+
+# Installs rails-controller-testing
+gem 'rails-controller-testing'
