@@ -73,3 +73,6 @@ gem 'will_paginate', '~> 3.1.1'
 
 # Installs rails-controller-testing
 gem 'rails-controller-testing'
+
+# Install Stripe for payments
+gem 'stripe'
