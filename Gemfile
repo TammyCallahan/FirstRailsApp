@@ -79,3 +79,6 @@ gem 'stripe'
 
 # Install Brakeman
 gem 'brakeman', '>= 4.1.1'
+
+# Install Dalli for Memcachier
+gem 'dalli'
