@@ -76,3 +76,6 @@ gem 'rails-controller-testing'
 
 # Install Stripe for payments
 gem 'stripe'
+
+# Install Brakeman
+gem 'brakeman', '>= 4.1.1'
