@@ -82,3 +82,9 @@ gem 'brakeman', '>= 4.1.1'
 
 # Install Dalli for Memcachier
 gem 'dalli'
+
+# Install redis
+gem 'redis-rails'
+
+# Install New Relic
+gem 'newrelic_rpm'
