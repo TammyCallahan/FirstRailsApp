@@ -16,7 +16,7 @@
 
     <h4><%= number_to_currency(@product.price) %></h4>
 
-    <h6>Viewed <%= @product.view_count %> times</h6>
+    <h6>Views: <%= @product.view_count %></h6>
 
     <%= form_with(url: '/payments/create') do |form| %>
     <%= render partial: "shared/stripe_checkout_button" %>
