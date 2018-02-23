@@ -99,4 +99,8 @@ Rails.application.configure do
                      :socket_failure_delay => 0.2,
                      :down_retry_delay => 60
                     }
+
+  # Allow ActionCable requests in production.
+  config.web_socket_server_url = "wss://bike-berlin-ruby-app.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://bike-berlin-ruby-app.herokuapp.com', 'http://bike-berlin-ruby-app.herokuapp.com']
 end

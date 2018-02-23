@@ -5,6 +5,6 @@ test:
   adapter: async
 
 production:
-  adapter: redis
-  url: redis://localhost:6379/1
+  adapter: postgresql
+  url: postgres://xqzlezulqvyyfl:3a323aa4ac5e8509283ac11be7f79343ec5e551cb1a7a9970b805d869936d09d@ec2-54-197-233-123.compute-1.amazonaws.com:5432/dcpia42j70hqh4
   channel_prefix: FirstRailsApp_production
