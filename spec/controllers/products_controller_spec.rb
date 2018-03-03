@@ -50,27 +50,33 @@ describe ProductsController, type: :controller do
   context 'POST #create' do
     it "creates valid product" do
       @product = FactoryBot.build(:product)
-      expect(@product).to be_valid
+      post :create, params: { product: {id: @product.id, name: @product.name, description: @product.description, colour: @product.colour, price: @product.price} }
+      expect(assigns(:product)).to be_a(Product)
+      expect(response).to redirect_to product_path(assigns(:product))
     end
 
     it "won't create valid product with missing name" do
       @product = FactoryBot.build(:product, name: nil)
-      expect(@product).not_to be_valid
+      post :create, params: { product: {id: @product.id, name: @product.name, description: @product.description, colour: @product.colour, price: @product.price} }
+      expect(assigns(:product)).not_to be_valid
+      expect(assigns(:product).errors).to_not be_empty
+      expect(response).to be_ok #doesn't redirect, stays on page with error message
     end
   end
 
   context 'PUT #update' do
     it "updates a product" do
       @update = { name: "NEWname", id: @product.id}
-      post :update, params: {id: @product.id, product: @update }
+      put :update, params: { id: @product.id, product: @update }
       @product.reload
       expect(@product.name).to eq "NEWname"
+      expect(response).to redirect_to product_path(assigns(:product))
     end
   end
 
   context 'DELETE #destroy' do
     it "deletes a product" do
-      delete :destroy, params: {id: @product.id}
+      delete :destroy, params: { id: @product.id }
       expect(response).to redirect_to products_path
     end
   end

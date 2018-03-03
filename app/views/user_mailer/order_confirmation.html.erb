@@ -1,0 +1,22 @@
+<table border="1" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td>
+        <table align="left" border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse; font-family: 'Roboto', sans-serif;">
+          <tbody>
+            <tr>
+              <td bgcolor="#197278" style="color: #ffffff; padding: 5px 10px 0 10px;" >
+                <p><strong>Thank you for your order!</strong></p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 5px 10px 5px 10px;">
+                <p>Your order number is <%= @order_id %>, and the total is <%= number_to_currency(@order_total) %>.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>

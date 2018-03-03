@@ -14,4 +14,11 @@ class UserMailer < ApplicationMailer
          subject: "Welcome to #{@appname}!")
   end
 
+  def order_confirmation(confirmation_email, confirmation_id, confirmation_total)
+    @order_id = confirmation_id
+    @order_total = confirmation_total
+    mail(to: confirmation_email,
+         subject: "Thank you for your order!")
+  end
+
 end

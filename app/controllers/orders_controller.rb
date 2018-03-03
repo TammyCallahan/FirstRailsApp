@@ -13,6 +13,12 @@ class OrdersController < ApplicationController
   end
 
   def create
+    if @order.persisted?
+      @confirmation_email = current_user.email
+      @confirmation_id = order.id
+      @confirmation_total = order.total
+      UserMailer.order_confirmation(@confirmation_email, @confirmation_ID, @confirmation_total).deliver_now
+    end
   end
 
   def destroy
