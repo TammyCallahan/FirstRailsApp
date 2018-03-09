@@ -34,6 +34,19 @@
       <div class="collapse navbar-collapse">
         <!-- User Login Info -->
         <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+          <li><%= link_to('Hello ' + current_user.first_name + ' ' + current_user.last_name, user_path(current_user)) %></li>
+          <li><%= link_to('LOGOUT', destroy_user_session_path, method: :delete) %></li>
+          <% else %>
+          <li><%= link_to('LOGIN', new_user_session_path) %></li>
+          <% end %>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-left">
+          <li><%= link_to "ABOUT", simple_pages_about_path %></li>
+          <li><%= link_to "PRODUCTS", products_path %></li>
+          <li><%= link_to "ORDERS", orders_path %></li>
+          <li><%= link_to "CONTACT", simple_pages_contact_path %></li>
           <li>
             <%= form_with(url: products_path, method: 'get', local: true, class: "navbar-form") do |form| %>
             <%= form.label :q, 'Search for:' %>
@@ -41,20 +54,6 @@
             <%= form.submit 'Search' %>
             <% end %>
           </li>
-          <li>
-            <% if user_signed_in? %>
-            <%= link_to('LOGOUT', destroy_user_session_path, method: :delete) %>
-            <% else %>
-            <%= link_to('LOGIN', new_user_session_path) %>
-            <% end %>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-left">
-          <li><%= link_to "ABOUT", simple_pages_about_path %></li>
-          <li><%= link_to "PRODUCTS", products_path %></li>
-          <li><%= link_to "ORDERS", orders_path %></li>
-          <li><%= link_to "USERS", users_path %></li>
-          <li><%= link_to "CONTACT", simple_pages_contact_path %></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
