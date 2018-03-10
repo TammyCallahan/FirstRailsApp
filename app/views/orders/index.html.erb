@@ -11,6 +11,7 @@
       </h2>
       <p>Ordered by: <%= order.user.first_name + " " + order.user.last_name %></p>
       <strong><%= number_to_currency(order.product.price) %></strong>
+      <p>User ID: <%= order.user_id %></p>
     </div><!-- /col -->
   <% end %>
 </div>
