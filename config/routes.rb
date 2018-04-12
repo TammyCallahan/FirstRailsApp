@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   mount ActionCable.server => '/cable'
 
-  root 'simple_pages#landing_page'
+  root 'simple_pages#index'
 
   get 'simple_pages/about'
 
